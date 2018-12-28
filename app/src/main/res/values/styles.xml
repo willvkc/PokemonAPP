@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/principal</item>
+        <item name="colorPrimaryDark">@color/azul2</item>
+        <item name="colorAccent">@color/azul3</item>
+        <item name="android:textColor">@color/letra1</item>
+    </style>
+
+
+    <style name="AppThemeFull" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/principal</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorPrimaryDark">@color/azul2</item>
+        <item name="colorAccent">@color/azul3</item>
+        <item name="android:textColor">@color/letra1</item>
+    </style>
+
+    <style name="AppThemeFull1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/principal</item>
+        <item name="colorPrimaryDark">@color/azul2</item>
+        <item name="colorAccent">@color/azul3</item>
+        <item name="android:textColor">@color/letra1</item>
+
+    </style>
+
+
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/principal</item>
+        <item name="colorPrimaryDark">@color/azul2</item>
+        <item name="colorAccent">@color/azul3</item>
+        <item name="android:textColor">@color/letra1</item>
+    </style>
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/up</item>
+        <item name="android:windowExitAnimation">@anim/down</item>
+    </style>
+
+
+</resources>

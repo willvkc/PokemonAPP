@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="item_size0">20.5sp</dimen>
+    <dimen name="item_size1">18.5sp</dimen>
+    <dimen name="item_size2">16.5sp</dimen>
+    <dimen name="item_size3">14.5sp</dimen>
+    <dimen name="item_size4">13.5sp</dimen>
+    <dimen name="item_size5">11.5sp</dimen>
+
+    <dimen name="img_dialog">105dp</dimen>
+    <dimen name="btn_close">32dp</dimen>
+</resources>

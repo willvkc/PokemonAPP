@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="item_padding_v">10dp</dimen>
+    <dimen name="item_padding_h">12dp</dimen>
+
+</resources>

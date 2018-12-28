@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="principal">#1f7fd4</color>
+    <color name="azul1">#3188d6</color>
+    <color name="azul2">#0e7cde</color>
+    <color name="azul3">#569bd9</color>
+    <color name="letra">#f1f1f1</color>
+    <color name="branco">#e3cfcfcf</color>
+
+    <color name="letra1">#303030</color>
+
+</resources>
