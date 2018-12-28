@@ -52,10 +52,10 @@ public class Lista extends AppCompatActivity implements PokemonsWS.PokemonsCall,
     @BindView(R.id.linEsconder)
     LinearLayout linEsconder;
 
+    private AlertDialog dialogFiltro, dialogDetalhes;
     private List<PokemonItem> pokemonItems;
     private ResponseDao responseDaoTipos;
     private TextView txtMensagemFiltro;
-    private AlertDialog dialogFiltro, dialogDetalhes;
     private RecyclerView listaFiltro;
     private Button btnFooterFiltro;
     private PokemonsWS pokemonsWS;
@@ -72,10 +72,9 @@ public class Lista extends AppCompatActivity implements PokemonsWS.PokemonsCall,
         pokemonsWS = new PokemonsWS(context, this);
         new getTipos().execute();
 
-
         ActionBar abar = getSupportActionBar();
         View viewActionBar = getLayoutInflater().inflate(R.layout.action_bar, null);
-        TextView txtTitle = (TextView) viewActionBar.findViewById(R.id.txtTitle);
+        TextView txtTitle = viewActionBar.findViewById(R.id.txtTitle);
         ActionBar.LayoutParams params = new ActionBar.LayoutParams(//Center the textview in the ActionBar !
                 ActionBar.LayoutParams.WRAP_CONTENT,
                 ActionBar.LayoutParams.WRAP_CONTENT,
@@ -98,6 +97,10 @@ public class Lista extends AppCompatActivity implements PokemonsWS.PokemonsCall,
     }
 
     private void abrirFiltro() {
+        if (responseDaoTipos == null){
+            utilidade.mostrarToast("Tipos de Pokémon's ainda está carregando, aguarde...");
+            return;
+        }
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         dialogFiltro = builder.create();
         dialogFiltro.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
@@ -129,6 +132,7 @@ public class Lista extends AppCompatActivity implements PokemonsWS.PokemonsCall,
                 utilidade.fecharDialog(dialogFiltro);
             }
         });
+
 
         if (utilidade.tratarLista(txtMensagemFiltro, listaFiltro, responseDaoTipos.getResults())) {
             AdapTipo adapTipo = new AdapTipo(context, responseDaoTipos.getResults(), Lista.this);
