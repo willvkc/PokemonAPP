@@ -2,17 +2,11 @@ package br.com.app5m.www.pokemonapi.Utils;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Toast;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import okhttp3.OkHttpClient;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Utilidade {
     private Context context;
@@ -42,18 +36,6 @@ public class Utilidade {
     public void fecharDialog(AlertDialog alertDialog) {
         if (alertDialog == null) return;
         if (alertDialog.isShowing()) alertDialog.dismiss();
-
-    }
-
-    public Retrofit getRetrofit(@NonNull boolean log_enable) {
-
-        OkHttpClient client = new OkHttpClient.Builder()
-                .connectTimeout(1, TimeUnit.MINUTES)
-                .writeTimeout(1, TimeUnit.MINUTES)
-                .readTimeout(1, TimeUnit.MINUTES)
-                .build();
-
-        return new Retrofit.Builder().baseUrl(Webservice.URL).addConverterFactory(GsonConverterFactory.create()).client(client).build();
 
     }
 
